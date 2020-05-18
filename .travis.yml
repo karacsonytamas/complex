@@ -22,15 +22,15 @@ after_success:
     - docker push karacsonytamas/multi-server
     - docker push karacsonytamas/multi-worker
 
-#deploy:
-#    edge: true
-#    provider: elasticbeanstalk
-#    region: us-east-2
-#    app: docker-multi
-#    env: DockerMulti-env
-#    bucet_name: elasticbeanstalk-us-east-2-393787123670
-#    bucket_path: multi_docker
-#    on:
-#        branch: master
-#    access_key_id: $AWS_ACCESS_KEY
-#    secret_access_key: $AWS_SECRET_KEY
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: eu-central-1
+    app: multi-docker
+    env: MultiDockeri-env
+    bucket_name: elasticbeanstalk-eu-central-1-894737959876
+    bucket_path: docker-multi
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
